@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Riparian Circular Solutions Limited | Niger Delta Waterway Restoration &amp; Climate Education</title>
+    <meta name="description" content="Official site of The Riparian Circular Solutions Limited (RC: 9999453). An early-stage environmental enterprise in Aladja and Warri, Delta State focused on ecological protection, free school climate education, and community biodigester infrastructure.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Brand Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        river: {
+                            deep: '#124552',      // Deep River Teal
+                            waterway: '#2A7886',  // Waterway Blue-Teal
+                            leaf: '#6B9E48',      // Riparian Leaf Green
+                            hyacinth: '#8E6BB0',  // Water Hyacinth Violet
+                            sand: '#F8FAF9',      // Warm Off-White / River Sand
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F8FAF9;
+            color: #1E293B;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        /* Custom Range Slider Styling */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            height: 8px;
+            border-radius: 999px;
+            background: #E2E8F0;
+        }
+        input[type="range"].hyacinth-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            margin-top: -6px;
+            background-color: #6B9E48;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 2px 6px rgba(18, 69, 82, 0.25);
+            transition: transform 0.15s ease;
+        }
+        input[type="range"].waste-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            margin-top: -6px;
+            background-color: #2A7886;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 2px 6px rgba(18, 69, 82, 0.25);
+            transition: transform 0.15s ease;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+        .subtle-grid {
+            background-image: radial-gradient(rgba(18, 69, 82, 0.08) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        @keyframes floatBubble {
+            0% { transform: translateY(0) scale(0.9); opacity: 0.2; }
+            50% { opacity: 0.9; }
+            100% { transform: translateY(-28px) scale(1.15); opacity: 0; }
+        }
+        .methane-bubble {
+            animation: floatBubble 2.6s infinite ease-in-out;
+        }
+        .methane-bubble-delay-1 {
+            animation: floatBubble 2.6s infinite ease-in-out 0.8s;
+        }
+        .methane-bubble-delay-2 {
+            animation: floatBubble 2.6s infinite ease-in-out 1.6s;
+        }
+        @keyframes pulseFlow {
+            0%, 100% { stroke-dashoffset: 24; }
+            50% { stroke-dashoffset: 0; }
+        }
+        .flow-pipe {
+            stroke-dasharray: 6 6;
+            animation: pulseFlow 2s linear infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-river-waterway selection:text-white">
+
+    <!-- =====================================================================
+         1. STICKY NAVIGATION BAR
+    ====================================================================== -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo (Custom Inline SVG Recreation + Wordmark) -->
+                <a href="#" class="flex items-center gap-3 group focus:outline-none" aria-label="The Riparian Circular Solutions Limited Home">
+                    <div class="w-12 h-12 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+                        <!-- Custom Inline SVG Logo matching IMG_2112 / IMG_2113 -->
+                        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <defs>
+                                <linearGradient id="riparianWaveGrad" x1="65" y1="75" x2="155" y2="135" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#6B9E48"/>
+                                    <stop offset="55%" stop-color="#3B8778"/>
+                                    <stop offset="100%" stop-color="#2A7886"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Outer Top Leaf Arch -->
+                            <path d="M 15 104 C 15 52, 56 18, 104 18 C 147 18, 180 48, 187 86 C 175 74, 162 67, 148 64 C 136 42, 114 31, 88 34 C 54 38, 28 65, 15 104 Z" fill="#6B9E48"/>
+                            <!-- Inner Upper Leaf -->
+                            <path d="M 35 68 C 52 46, 80 39, 102 41 C 94 64, 72 80, 44 82 C 32 83, 23 89, 16 98 C 20 86, 26 76, 35 68 Z" fill="#6B9E48"/>
+                            <!-- Water Hyacinth Flower Petals (Violet & Green) -->
+                            <!-- Left Violet Petal -->
+                            <path d="M 114 77 C 102 74, 96 63, 97 50 C 108 52, 117 61, 118 73 C 118 75, 116 77, 114 77 Z" fill="#8E6BB0"/>
+                            <!-- Top Center Violet Petal -->
+                            <path d="M 121 67 C 113 57, 114 43, 123 34 C 132 42, 134 55, 127 66 C 125 68, 122 68, 121 67 Z" fill="#8E6BB0"/>
+                            <!-- Right Green-Teal Petal / Sprout Leaf -->
+                            <path d="M 108 92 C 114 84, 122 76, 124 67 C 127 57, 134 50, 143 49 C 147 63, 143 79, 132 90 C 124 98, 120 105, 123 114 C 114 109, 107 100, 108 92 Z" fill="#4D8B5E"/>
+                            <!-- Middle Flowing Green-to-Teal Ribbon -->
+                            <path d="M 20 118 C 23 88, 48 68, 78 72 C 100 75, 113 92, 123 108 C 134 124, 156 128, 174 114 C 166 136, 142 148, 118 144 C 95 140, 82 118, 66 102 C 50 87, 27 93, 20 118 Z" fill="url(#riparianWaveGrad)"/>
+                            <!-- Right Curving Waterway Wave -->
+                            <path d="M 134 121 C 155 123, 170 106, 166 74 C 181 80, 190 97, 187 117 C 183 144, 156 164, 125 162 C 98 160, 82 142, 68 124 C 55 107, 36 105, 31 124 C 28 110, 38 97, 54 98 C 72 99, 85 117, 99 132 C 116 149, 146 151, 166 131 C 156 136, 143 133, 134 121 Z" fill="#2A7886"/>
+                            <!-- Deep River Teal Base Wave -->
+                            <path d="M 33 112 C 23 125, 22 146, 33 163 C 50 188, 86 198, 121 190 C 157 182, 183 153, 188 120 C 175 147, 147 167, 114 168 C 84 169, 66 150, 54 130 C 46 117, 38 111, 33 112 Z" fill="#124552"/>
+                            <!-- Subtle Pale Aqua Highlight Streak inside Deep Wave -->
+                            <path d="M 52 117 C 40 123, 39 144, 51 161 C 63 177, 84 184, 102 183 C 83 178, 67 167, 58 151 C 50 137, 51 123, 57 118 Z" fill="#82A7AE"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-river-deep text-base sm:text-lg tracking-tight leading-none">
+                            RIPARIAN
+                        </span>
+                        <span class="font-sans font-semibold text-[10px] sm:text-[11px] tracking-[0.14em] text-slate-600 uppercase mt-1">
+                            CIRCULAR SOLUTIONS
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="#ecology-101" onclick="showMainView()" class="main-nav-link text-sm font-medium text-slate-700 hover:text-river-waterway transition-colors">Why Hyacinth Matters</a>
+                    <a href="#biodigester-visualizer" onclick="showMainView()" class="main-nav-link text-sm font-medium text-slate-700 hover:text-river-waterway transition-colors">Biodigester Tech</a>
+                    <a href="#free-schools" onclick="showMainView()" class="main-nav-link text-sm font-medium text-slate-700 hover:text-river-waterway transition-colors">Free School Program</a>
+                    <button type="button" id="nav-sdg-btn" onclick="showSdgView()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-river-waterway bg-river-waterway/10 hover:bg-river-waterway hover:text-white transition-all">
+                        <i data-lucide="globe-2" class="w-4 h-4"></i>
+                        <span>UN SDGs Guide</span>
+                    </button>
+                    <a href="#roadmap" onclick="showMainView()" class="main-nav-link text-sm font-medium text-slate-700 hover:text-river-waterway transition-colors">Roadmap</a>
+                    <a href="#partner" onclick="showMainView()" class="main-nav-link text-sm font-medium text-slate-700 hover:text-river-waterway transition-colors">Collaborate</a>
+                </nav>
+
+                <!-- Desktop CTA & Mobile Menu Toggle -->
+                <div class="flex items-center gap-3">
+                    <button type="button" id="view-switch-pill" onclick="togglePageView()" class="hidden sm:inline-flex items-center gap-2 bg-river-deep hover:bg-river-waterway text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition-all duration-200">
+                        <i data-lucide="globe-2" id="view-switch-icon" class="w-4 h-4 text-river-leaf"></i>
+                        <span id="view-switch-text">Explore UN SDGs</span>
+                    </button>
+                    <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl text-river-deep hover:bg-slate-100 focus:outline-none" aria-label="Toggle Menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+            <a href="#ecology-101" onclick="showMainView()" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-river-sand hover:text-river-deep">Why Hyacinth Matters</a>
+            <a href="#biodigester-visualizer" onclick="showMainView()" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-river-sand hover:text-river-deep">Biodigester Tech Visualizer</a>
+            <a href="#free-schools" onclick="showMainView()" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-river-sand hover:text-river-deep">Free School Program</a>
+            <button type="button" onclick="showSdgView(); mobileMenu.classList.add('hidden');" class="w-full text-left flex items-center gap-2 px-3 py-2.5 rounded-lg text-base font-bold text-river-waterway bg-river-waterway/10">
+                <i data-lucide="globe-2" class="w-5 h-5"></i>
+                <span>UN SDGs Educational Guide</span>
+            </button>
+            <a href="#roadmap" onclick="showMainView()" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-river-sand hover:text-river-deep">Launch Roadmap</a>
+            <a href="#partner" onclick="showMainView()" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-river-sand hover:text-river-deep">Collaborate &amp; Contact</a>
+            <div class="pt-2">
+                <a href="#free-schools" onclick="showMainView()" class="mobile-link flex items-center justify-center gap-2 w-full bg-river-deep text-white font-semibold px-5 py-3 rounded-xl">
+                    <i data-lucide="graduation-cap" class="w-4 h-4 text-river-leaf"></i>
+                    <span>Book Free School Visit</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         MAIN SITE VIEW WRAPPER
+    ====================================================================== -->
+    <main id="main-site-view">
+    <!-- =====================================================================
+         2. HERO SECTION (EARLY-STAGE, GROUND-UP POSITIONING)
+    ====================================================================== -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-white via-river-sand to-river-sand pt-12 pb-16 sm:pt-20 sm:pb-24 subtle-grid border-b border-slate-200/70">
+        <!-- Decorative Ambient Glows -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-river-leaf/10 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-river-waterway/10 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Column: Copy & CTAs -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Official Registration & Early-Stage Pill -->
+                    <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-xs text-xs font-semibold text-river-deep">
+                        <span class="w-2 h-2 rounded-full bg-river-leaf animate-pulse"></span>
+                        <span>Newly Registered • RC: 9999453</span>
+                        <span class="text-slate-300">•</span>
+                        <span class="text-river-waterway">Building From the Ground Up in Aladja &amp; Warri</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-[3.3rem] font-extrabold text-river-deep tracking-tight leading-[1.12]">
+                        Restoring the Niger Delta's Waterways, <span class="text-river-waterway">One Community at a Time.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+                        We are a newly registered environmental enterprise laying the groundwork for cleaner creeks and circular sanitation in <strong class="text-river-deep font-semibold">Aladja Town</strong> and <strong class="text-river-deep font-semibold">Pessu Market, Warri</strong>. Before laying a single brick of infrastructure, we start with <strong class="text-river-deep font-semibold">ecological education</strong>, community stewardship, and transparent engineering design.
+                    </p>
+
+                    <!-- Primary & Secondary CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="#biodigester-visualizer" class="inline-flex items-center justify-center gap-2.5 bg-river-deep hover:bg-river-waterway text-white font-semibold px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200">
+                            <i data-lucide="cpu" class="w-4 h-4 text-river-leaf"></i>
+                            <span>Explore the Biodigester Tech</span>
+                        </a>
+                        <button type="button" onclick="showSdgView()" class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-50 text-river-deep border border-slate-300 font-semibold px-7 py-3.5 rounded-xl transition-all duration-200">
+                            <i data-lucide="globe-2" class="w-4 h-4 text-river-waterway"></i>
+                            <span>Our UN SDGs Guide</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Pre-Build Mission & Free School Outreach Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-xl space-y-5">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-river-leaf">Phase 1 • Active Now</span>
+                                <h2 class="text-lg font-extrabold text-river-deep mt-0.5">Education &amp; Groundwork First</h2>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-river-leaf/15 text-river-leaf text-xs font-bold">
+                                Pre-Build Stage
+                            </span>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            We haven't constructed our physical biodigesters yet—and that is intentional. Sustainable infrastructure only thrives when communities and young people understand the science behind it.
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="p-3.5 rounded-2xl bg-river-sand border border-slate-200/80 flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-river-waterway/15 text-river-waterway flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-bold text-river-deep">100% Free School Workshops</h3>
+                                    <p class="text-xs text-slate-600 mt-0.5">Invite our team to teach climate change, waterway ecology, and UN SDGs at zero cost.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-river-sand border border-slate-200/80 flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-river-leaf/15 text-river-leaf flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="compass" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-bold text-river-deep">Aladja &amp; Pessu Market Surveys</h3>
+                                    <p class="text-xs text-slate-600 mt-0.5">Engaging riverine leaders and market unions ahead of our planned pilot builds.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#free-schools" class="w-full inline-flex items-center justify-center gap-2 bg-river-leaf hover:bg-river-leaf/90 text-white text-sm font-bold px-5 py-3 rounded-xl transition-all">
+                            <span>Book a Free School Visit</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         3. ECOLOGICAL LITERACY 101: WHY WATER HYACINTH MATTERS
+    ====================================================================== -->
+    <section id="ecology-101" class="py-16 sm:py-24 bg-white border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-river-waterway mb-3">
+                    <span class="w-6 h-0.5 bg-river-waterway"></span>
+                    Ecological Literacy 101
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-river-deep tracking-tight">
+                    Why Invasive Water Hyacinth Matters in the Niger Delta
+                </h2>
+                <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+                    Recognizable by its violet flowers, floating water hyacinth (<em class="text-river-deep">Pontederia crassipes</em>) doubles its biomass every 10–14 days when fed by untreated organic runoff. Left unchecked, dense mats choke creeks, livelihoods, and aquatic life.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 sm:p-7 rounded-3xl bg-river-sand border border-slate-200/90 space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-river-waterway/15 text-river-waterway flex items-center justify-center">
+                        <i data-lucide="fish" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-river-deep">Dissolved Oxygen &amp; Fish Loss</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Thick floating canopies block sunlight from reaching submerged aquatic plants, depleting dissolved oxygen and driving away native fish populations that riverine families rely on.
+                    </p>
+                </div>
+
+                <div class="p-6 sm:p-7 rounded-3xl bg-river-sand border border-slate-200/90 space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-river-hyacinth/15 text-river-hyacinth flex items-center justify-center">
+                        <i data-lucide="cloud-rain-wind" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-river-deep">Hidden Methane Emissions</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        When hyacinth mats die and sink to oxygen-poor riverbeds, they decompose anaerobically—releasing methane, a greenhouse gas over 28 times more potent than carbon dioxide.
+                    </p>
+                </div>
+
+                <div class="p-6 sm:p-7 rounded-3xl bg-river-sand border border-slate-200/90 space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-river-leaf/15 text-river-leaf flex items-center justify-center">
+                        <i data-lucide="navigation" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-river-deep">Blocked Waterways &amp; Mangroves</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Tangled weed mats stall local canoes, trap plastic debris, and degrade delicate mangrove fringes. Harvesting them for biodigesters protects creeks while replacing firewood.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         4. INTERACTIVE BIODIGESTER TECHNOLOGY VISUALIZER
+    ====================================================================== -->
+    <section id="biodigester-visualizer" class="py-16 sm:py-24 bg-river-sand border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+                <div class="max-w-3xl">
+                    <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-river-leaf mb-3">
+                        <span class="w-6 h-0.5 bg-river-leaf"></span>
+                        Interactive Engineering Blueprint
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-river-deep tracking-tight">
+                        How Our Planned Biodigester Technology Works
+                    </h2>
+                    <p class="mt-3 text-base text-slate-600">
+                        Click any step or diagram zone below to inspect how invasive water hyacinth and organic market waste are co-digested into clean cooking gas and organic fertilizer.
+                    </p>
+                </div>
+
+                <button type="button" onclick="toggleVisualizerPlay()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-xs font-bold text-river-deep hover:bg-slate-50 transition-all self-start lg:self-auto">
+                    <i data-lucide="pause" id="play-icon" class="w-4 h-4 text-river-waterway"></i>
+                    <span id="play-label">Pause Auto-Cycle</span>
+                </button>
+            </div>
+
+            <!-- 4 Step Selector Buttons -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-8">
+                <button type="button" id="viz-step-btn-0" onclick="setVisualizerStep(0)" class="viz-step-btn text-left p-4 rounded-2xl border-2 border-river-deep bg-river-deep text-white shadow-sm transition-all">
+                    <span class="text-[11px] font-bold uppercase tracking-wider opacity-80 block">Step 01 • Input</span>
+                    <p class="font-heading font-bold text-sm mt-1">Feedstock Prep &amp; Inlet</p>
+                </button>
+                <button type="button" id="viz-step-btn-1" onclick="setVisualizerStep(1)" class="viz-step-btn text-left p-4 rounded-2xl border-2 border-slate-200 bg-white text-river-deep hover:border-river-waterway transition-all">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Step 02 • Chamber</span>
+                    <p class="font-heading font-bold text-sm mt-1">Zero-Oxygen Digestion</p>
+                </button>
+                <button type="button" id="viz-step-btn-2" onclick="setVisualizerStep(2)" class="viz-step-btn text-left p-4 rounded-2xl border-2 border-slate-200 bg-white text-river-deep hover:border-river-waterway transition-all">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Step 03 • Capture</span>
+                    <p class="font-heading font-bold text-sm mt-1">Biogas Dome &amp; Scrubbing</p>
+                </button>
+                <button type="button" id="viz-step-btn-3" onclick="setVisualizerStep(3)" class="viz-step-btn text-left p-4 rounded-2xl border-2 border-slate-200 bg-white text-river-deep hover:border-river-waterway transition-all">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Step 04 • Outputs</span>
+                    <p class="font-heading font-bold text-sm mt-1">Gas, Fertilizer &amp; WASH</p>
+                </button>
+            </div>
+
+            <!-- Interactive SVG Diagram + Explanation Panel -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-10">
+                <!-- Left 7 Cols: Interactive SVG Schematic -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-7 border border-slate-200/90 shadow-xs flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Interactive Cross-Section Schematic</span>
+                        <span class="text-xs font-semibold text-river-waterway">Tap zones 1–4 to inspect</span>
+                    </div>
+
+                    <div class="w-full overflow-hidden rounded-2xl bg-river-sand border border-slate-200/70 p-2">
+                        <svg viewBox="0 0 720 380" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Ground Line -->
+                            <line x1="20" y1="165" x2="700" y2="165" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 4"/>
+                            <text x="28" y="156" fill="#64748B" font-size="11" font-weight="700" font-family="Inter, sans-serif">GROUND LEVEL</text>
+
+                            <!-- ZONE 0: Inlet Hopper -->
+                            <g id="svg-zone-0" onclick="setVisualizerStep(0)" class="cursor-pointer transition-opacity duration-300">
+                                <rect id="svg-ring-0" x="28" y="72" width="136" height="175" rx="16" stroke="#6B9E48" stroke-width="2.5" stroke-dasharray="5 4" fill="#6B9E48" fill-opacity="0.06"/>
+                                <path d="M52 100 H132 L116 155 H68 Z" fill="#6B9E48"/>
+                                <rect x="82" y="155" width="20" height="75" fill="#4D8B5E"/>
+                                <path d="M92 220 L215 245" stroke="#6B9E48" stroke-width="10" stroke-linecap="round"/>
+                                <text x="92" y="90" text-anchor="middle" fill="#124552" font-size="12" font-weight="800" font-family="Plus Jakarta Sans, sans-serif">1. INLET MIXER</text>
+                                <text x="92" y="124" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">Hyacinth +</text>
+                                <text x="92" y="138" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">Food Waste</text>
+                            </g>
+
+                            <!-- ZONE 1: Underground Anaerobic Chamber -->
+                            <g id="svg-zone-1" onclick="setVisualizerStep(1)" class="cursor-pointer transition-opacity duration-300">
+                                <rect id="svg-ring-1" x="195" y="185" width="270" height="165" rx="22" stroke="#2A7886" stroke-width="2.5" stroke-dasharray="5 4" fill="#2A7886" fill-opacity="0.06"/>
+                                <path d="M210 205 H450 V315 C450 330 438 340 422 340 H238 C222 340 210 330 210 315 Z" fill="#124552"/>
+                                <path d="M218 220 H442 V312 C442 323 433 331 420 331 H240 C227 331 218 323 218 312 Z" fill="#2A7886"/>
+                                <!-- Rising Methane Bubbles -->
+                                <circle cx="265" cy="295" r="5" fill="#A7F3D0" class="methane-bubble"/>
+                                <circle cx="330" cy="305" r="6" fill="#A7F3D0" class="methane-bubble-delay-1"/>
+                                <circle cx="390" cy="290" r="5" fill="#A7F3D0" class="methane-bubble-delay-2"/>
+                                <text x="330" y="258" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800" font-family="Plus Jakarta Sans, sans-serif">2. ANAEROBIC CHAMBER</text>
+                                <text x="330" y="276" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="600">Zero-Oxygen Microbial Digestion (35–38°C)</text>
+                            </g>
+
+                            <!-- ZONE 2: Biogas Dome & Scrubber -->
+                            <g id="svg-zone-2" onclick="setVisualizerStep(2)" class="cursor-pointer transition-opacity duration-300">
+                                <rect id="svg-ring-2" x="215" y="55" width="230" height="125" rx="18" stroke="#D97706" stroke-width="2.5" stroke-dasharray="5 4" fill="#F59E0B" fill-opacity="0.08"/>
+                                <path d="M230 165 C230 105 430 105 430 165 Z" fill="#F59E0B" fill-opacity="0.85"/>
+                                <rect x="318" y="82" width="24" height="34" rx="4" fill="#124552"/>
+                                <text x="330" y="72" text-anchor="middle" fill="#124552" font-size="12" font-weight="800" font-family="Plus Jakarta Sans, sans-serif">3. BIOGAS DOME &amp; SCRUBBER</text>
+                                <text x="330" y="146" text-anchor="middle" fill="#124552" font-size="11" font-weight="800">55%–65% Clean Biomethane (CH₄)</text>
+                            </g>
+
+                            <!-- ZONE 3: Dual Circular Outputs (Gas + Slurry + WASH) -->
+                            <g id="svg-zone-3" onclick="setVisualizerStep(3)" class="cursor-pointer transition-opacity duration-300">
+                                <rect id="svg-ring-3" x="490" y="55" width="205" height="295" rx="18" stroke="#8E6BB0" stroke-width="2.5" stroke-dasharray="5 4" fill="#8E6BB0" fill-opacity="0.06"/>
+                                <!-- Gas Pipe to Stove -->
+                                <path d="M342 96 H520" stroke="#F59E0B" stroke-width="4" class="flow-pipe"/>
+                                <rect x="515" y="74" width="162" height="72" rx="12" fill="#124552"/>
+                                <text x="596" y="98" text-anchor="middle" fill="#FCD34D" font-size="11" font-weight="800">CLEAN COOKING BIOGAS</text>
+                                <text x="596" y="115" text-anchor="middle" fill="#FFFFFF" font-size="10">Markets &amp; Households</text>
+                                <text x="596" y="130" text-anchor="middle" fill="#A7F3D0" font-size="9.5" font-weight="700">Replaces Mangrove Firewood</text>
+
+                                <!-- Slurry Pipe to Fertilizer -->
+                                <path d="M442 265 H520" stroke="#6B9E48" stroke-width="6" stroke-linecap="round"/>
+                                <rect x="515" y="168" width="162" height="74" rx="12" fill="#6B9E48"/>
+                                <text x="596" y="193" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="800">ORGANIC BIO-FERTILIZER</text>
+                                <text x="596" y="210" text-anchor="middle" fill="#F8FAF9" font-size="10">Nutrient-Rich Digestate</text>
+                                <text x="596" y="225" text-anchor="middle" fill="#F8FAF9" font-size="9.5" font-weight="700">For Delta Smallholder Farms</text>
+
+                                <!-- Community WASH Reinvestment Box -->
+                                <rect x="515" y="262" width="162" height="72" rx="12" fill="#8E6BB0"/>
+                                <text x="596" y="287" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="800">COMMUNITY WASH</text>
+                                <text x="596" y="304" text-anchor="middle" fill="#F8FAF9" font-size="10">Toilets &amp; Handwashing</text>
+                                <text x="596" y="319" text-anchor="middle" fill="#F8FAF9" font-size="9.5" font-weight="700">Funded by Circular Revenue</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Right 5 Cols: Dynamic Step Explanation Card -->
+                <div id="viz-explanation-card" class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-xs flex flex-col justify-between">
+                    <!-- Populated via renderVisualizerStep() -->
+                </div>
+            </div>
+
+            <!-- Interactive Feedstock Mix & Output Science Sandbox -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-xs">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-river-hyacinth">Interactive Pilot Science Sandbox</span>
+                        <h3 class="text-xl font-extrabold text-river-deep mt-0.5">Explore Feedstock Mix &amp; Projected Pilot Yields</h3>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold">
+                        <i data-lucide="flask-conical" class="w-3.5 h-3.5"></i>
+                        Projected Engineering Design (Pre-Build Model)
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-6">
+                    <!-- Sliders -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <label for="hyacinth-input" class="text-sm font-bold text-river-deep flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-river-leaf"></span>
+                                    Monthly Hyacinth Cleared
+                                </label>
+                                <span class="px-3 py-1 rounded-lg bg-river-leaf/12 text-river-leaf font-heading font-extrabold text-sm">
+                                    <span id="hyacinth-val">30</span> tonnes
+                                </span>
+                            </div>
+                            <input type="range" id="hyacinth-input" min="5" max="150" step="5" value="30" class="w-full hyacinth-slider">
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <label for="waste-input" class="text-sm font-bold text-river-deep flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-river-waterway"></span>
+                                    Monthly Market Waste Diverted
+                                </label>
+                                <span class="px-3 py-1 rounded-lg bg-river-waterway/12 text-river-waterway font-heading font-extrabold text-sm">
+                                    <span id="waste-val">45</span> tonnes
+                                </span>
+                            </div>
+                            <input type="range" id="waste-input" min="5" max="200" step="5" value="45" class="w-full waste-slider">
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <button type="button" onclick="setEstimatorPreset(20, 25)" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-river-sand hover:bg-slate-200/70 text-river-deep border border-slate-200 transition-colors">
+                                Aladja Community Pilot
+                            </button>
+                            <button type="button" onclick="setEstimatorPreset(45, 90)" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-river-sand hover:bg-slate-200/70 text-river-deep border border-slate-200 transition-colors">
+                                Pessu Market Pilot
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Projected Outputs -->
+                    <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="p-4 rounded-2xl bg-river-sand border border-slate-200/80">
+                            <i data-lucide="waves" class="w-5 h-5 text-river-waterway mb-2"></i>
+                            <p class="text-xl sm:text-2xl font-extrabold text-river-deep font-heading"><span id="out-area">1,200</span> m²</p>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">Waterway Cleared</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-river-deep text-white">
+                            <i data-lucide="flame" class="w-5 h-5 text-amber-300 mb-2"></i>
+                            <p class="text-xl sm:text-2xl font-extrabold font-heading"><span id="out-biogas">3,450</span> m³</p>
+                            <p class="text-xs font-semibold text-slate-300 mt-1">Projected Biogas</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-river-sand border border-slate-200/80">
+                            <i data-lucide="sprout" class="w-5 h-5 text-river-leaf mb-2"></i>
+                            <p class="text-xl sm:text-2xl font-extrabold text-river-deep font-heading"><span id="out-fertilizer">21,000</span> kg</p>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">Organic Digestate</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-river-sand border border-slate-200/80">
+                            <i data-lucide="cloud-off" class="w-5 h-5 text-river-hyacinth mb-2"></i>
+                            <p class="text-xl sm:text-2xl font-extrabold text-river-deep font-heading"><span id="out-co2">38.9</span> t</p>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">CO₂e Avoided</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         5. FREE SCHOOL CLIMATE & SUSTAINABILITY OUTREACH PROGRAM
+    ====================================================================== -->
+    <section id="free-schools" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-river-leaf/15 text-river-leaf text-xs font-bold uppercase tracking-wider mb-3">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                        <span>100% Free Educational Service for Schools</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-river-deep tracking-tight">
+                        Free Climate Change &amp; Sustainability Workshops for Schools
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+                        Long-term environmental restoration starts in the classroom. Primary schools, secondary schools, tertiary institutions, and student clubs across <strong class="text-river-deep font-semibold">Southern Nigeria (South-South &amp; South-East states, starting from Delta State)</strong> can invite our team at <strong class="text-river-leaf font-bold">zero cost</strong> to deliver interactive assemblies, science club sessions, and hands-on sustainability workshops.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 4 Curriculum Modules Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+                <!-- Module 1 -->
+                <div class="p-6 rounded-2xl bg-river-sand border border-slate-200/90 hover:border-river-leaf transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-river-waterway/15 text-river-waterway flex items-center justify-center mb-4">
+                            <i data-lucide="waves" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-river-waterway">Module 01</span>
+                        <h3 class="text-lg font-bold text-river-deep mt-1 mb-2">Waterway Ecology &amp; The Hyacinth Challenge</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Students learn how local creeks function, why invasive water hyacinth suffocates aquatic biodiversity, and how dissolved oxygen sustains fish life.
+                        </p>
+                    </div>
+                    <button type="button" onclick="preselectSchoolModule('Module 1: Waterway Ecology & The Hyacinth Challenge')" class="mt-5 text-xs font-bold text-river-waterway hover:underline inline-flex items-center gap-1">
+                        Request This Module <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="p-6 rounded-2xl bg-river-sand border border-slate-200/90 hover:border-river-leaf transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-river-leaf/15 text-river-leaf flex items-center justify-center mb-4">
+                            <i data-lucide="flame" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-river-leaf">Module 02</span>
+                        <h3 class="text-lg font-bold text-river-deep mt-1 mb-2">Circular Economy &amp; Waste-to-Energy 101</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            An interactive breakdown of anaerobic digestion—showing students how organic waste and weeds become clean cooking gas and organic fertilizer.
+                        </p>
+                    </div>
+                    <button type="button" onclick="preselectSchoolModule('Module 2: Circular Economy & Waste-to-Energy 101')" class="mt-5 text-xs font-bold text-river-leaf hover:underline inline-flex items-center gap-1">
+                        Request This Module <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="p-6 rounded-2xl bg-river-sand border border-slate-200/90 hover:border-river-leaf transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-river-hyacinth/15 text-river-hyacinth flex items-center justify-center mb-4">
+                            <i data-lucide="globe" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-river-hyacinth">Module 03</span>
+                        <h3 class="text-lg font-bold text-river-deep mt-1 mb-2">Climate Change &amp; Everyday Civic Action</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Connects global climate science to everyday habits in Delta State: stopping drain dumping, protecting mangroves, and reducing greenhouse gases.
+                        </p>
+                    </div>
+                    <button type="button" onclick="preselectSchoolModule('Module 3: Climate Change & Everyday Civic Action')" class="mt-5 text-xs font-bold text-river-hyacinth hover:underline inline-flex items-center gap-1">
+                        Request This Module <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="p-6 rounded-2xl bg-river-sand border border-slate-200/90 hover:border-river-leaf transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-river-deep/10 text-river-deep flex items-center justify-center mb-4">
+                            <i data-lucide="droplets" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-river-deep">Module 04</span>
+                        <h3 class="text-lg font-bold text-river-deep mt-1 mb-2">WASH, Hygiene &amp; Environmental Health</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Teaches practical Water, Sanitation, and Hygiene (WASH) principles, safe waste segregation at school, and preventing waterborne diseases.
+                        </p>
+                    </div>
+                    <button type="button" onclick="preselectSchoolModule('Module 4: WASH, Hygiene & Environmental Health')" class="mt-5 text-xs font-bold text-river-deep hover:underline inline-flex items-center gap-1">
+                        Request This Module <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Interactive "Invite Us to Your School" Booking Card -->
+            <div id="school-booking-box" class="rounded-3xl bg-river-deep text-white p-6 sm:p-10 shadow-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Left Info Column -->
+                    <div class="lg:col-span-5 space-y-5">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-river-leaf text-white text-xs font-bold uppercase tracking-wider">
+                            Zero-Cost School Outreach
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+                            Invite Our Team to Teach at Your School
+                        </h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Are you a principal, science teacher, proprietor, or student eco-club coordinator? Schedule a free 45–90 minute interactive workshop tailored to your students' age level.
+                        </p>
+                        <ul class="space-y-3 pt-2 text-sm text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-river-leaf flex-shrink-0"></i>
+                                <span>100% Free of Charge for Schools &amp; Youth Clubs</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-river-leaf flex-shrink-0"></i>
+                                <span>Interactive Visual Aids &amp; Biodigester Science Demos</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-river-leaf flex-shrink-0"></i>
+                                <span>Available Across Southern Nigeria (Delta, Rivers, Bayelsa, Edo &amp; Beyond)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Booking Form Column -->
+                    <div class="lg:col-span-7 bg-white text-slate-800 rounded-2xl p-6 sm:p-8">
+                        <form id="school-booking-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="school-name" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">School / Institution Name *</label>
+                                    <input type="text" id="school-name" required placeholder="e.g. Aladja Grammar School" class="w-full px-4 py-2.5 rounded-xl bg-river-sand border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                                </div>
+                                <div>
+                                    <label for="school-location" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">City / State (Southern Nigeria) *</label>
+                                    <input type="text" id="school-location" required placeholder="e.g. Warri / Aladja, Delta State or Port Harcourt, Rivers" class="w-full px-4 py-2.5 rounded-xl bg-river-sand border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="school-contact-name" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Contact Person &amp; Role *</label>
+                                    <input type="text" id="school-contact-name" required placeholder="e.g. Mrs. Grace Efe (Biology Teacher)" class="w-full px-4 py-2.5 rounded-xl bg-river-sand border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                                </div>
+                                <div>
+                                    <label for="school-contact-phone" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Phone / WhatsApp or Email *</label>
+                                    <input type="text" id="school-contact-phone" required placeholder="e.g. 0803 000 0000 / email" class="w-full px-4 py-2.5 rounded-xl bg-river-sand border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <div>
+                                    <label for="school-level" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Student Level</label>
+                                    <select id="school-level" class="w-full px-3.5 py-2.5 rounded-xl bg-river-sand border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                                        <option value="Primary School (Ages 6–11)">Primary School</option>
+                                        <option value="Junior Secondary (JSS 1–3)">Junior Secondary</option>
+                                        <option value="Senior Secondary (SSS 1–3)" selected>Senior Secondary</option>
+                                        <option value="Tertiary / Youth Club">Tertiary / Youth Club</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="school-module" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Workshop Topic</label>
+                                    <select id="school-module" class="w-full px-3.5 py-2.5 rounded-xl bg-river-sand border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                                        <option value="All-in-One Climate & Waterway Assembly">All-in-One Assembly</option>
+                                        <option value="Module 1: Waterway Ecology & The Hyacinth Challenge">01: Waterway Ecology</option>
+                                        <option value="Module 2: Circular Economy & Waste-to-Energy 101">02: Waste-to-Energy 101</option>
+                                        <option value="Module 3: Climate Change & Everyday Civic Action">03: Climate Civic Action</option>
+                                        <option value="Module 4: WASH, Hygiene & Environmental Health">04: WASH &amp; Health</option>
+                                        <option value="Module 5: UN SDGs & Local Action in the Niger Delta">05: UN SDGs &amp; Local Action</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="school-date" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Preferred Date</label>
+                                    <input type="date" id="school-date" class="w-full px-3.5 py-2.5 rounded-xl bg-river-sand border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-river-leaf hover:bg-river-leaf/90 text-white font-bold px-6 py-3.5 rounded-xl shadow-sm transition-all">
+                                <i data-lucide="calendar-check" class="w-4 h-4"></i>
+                                <span>Request Free School Workshop</span>
+                            </button>
+                        </form>
+
+                        <!-- Instant School Booking Confirmation -->
+                        <div id="school-confirmation" class="hidden rounded-2xl bg-river-sand border-2 border-river-leaf p-6 space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-river-leaf/15 text-river-leaf flex items-center justify-center">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-river-deep text-base">Free School Workshop Request Received!</h4>
+                                    <p class="text-xs text-slate-500">Outreach Desk • The Riparian Circular Solutions Limited</p>
+                                </div>
+                            </div>
+                            <p id="school-confirmation-text" class="text-sm text-slate-700 leading-relaxed"></p>
+                            <button type="button" onclick="resetSchoolForm()" class="text-xs font-bold text-river-waterway hover:underline">
+                                Book another school session →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         6. FOUNDATIONAL 4-PHASE LAUNCH ROADMAP & PLANNED HUBS
+    ====================================================================== -->
+    <section id="roadmap" class="py-16 sm:py-24 bg-river-sand border-y border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-river-hyacinth mb-3">
+                    <span class="w-6 h-0.5 bg-river-hyacinth"></span>
+                    Transparent Pre-Build Roadmap
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-river-deep tracking-tight">
+                    Our 4-Phase Launch Plan: From Education to Infrastructure
+                </h2>
+                <p class="mt-4 text-base text-slate-600 leading-relaxed">
+                    We believe in honest, step-by-step execution. Rather than rushing into unmaintained hardware, we are sequencing community trust, waterway assessments, and modular biodigester construction in clear stages.
+                </p>
+            </div>
+
+            <!-- 4-Phase Roadmap Timeline Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Phase 1 (Current) -->
+                <div class="rounded-3xl bg-white border-2 border-river-leaf p-6 shadow-sm relative">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-river-leaf text-white text-[11px] font-bold uppercase tracking-wider mb-4">
+                        Phase 1 • Active Now
+                    </span>
+                    <h3 class="text-lg font-bold text-river-deep mb-2">Foundation, Listening &amp; School Outreach</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        CAC registration (RC: 9999453), free climate change and sustainability workshops in local schools, and stakeholder consultations with Aladja riverine leaders and Pessu Market unions.
+                    </p>
+                </div>
+
+                <!-- Phase 2 (Next) -->
+                <div class="rounded-3xl bg-white border border-slate-200/90 p-6">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-river-waterway/15 text-river-waterway text-[11px] font-bold uppercase tracking-wider mb-4">
+                        Phase 2 • Next
+                    </span>
+                    <h3 class="text-lg font-bold text-river-deep mb-2">Waterway Surveys &amp; Pilot Clearing</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Mapping dense water hyacinth choke points along Aladja creeks, measuring baseline water quality, and organizing initial manual clearing trials with local youth teams.
+                    </p>
+                </div>
+
+                <!-- Phase 3 (Planned Build) -->
+                <div class="rounded-3xl bg-white border border-slate-200/90 p-6">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-river-hyacinth/15 text-river-hyacinth text-[11px] font-bold uppercase tracking-wider mb-4">
+                        Phase 3 • Planned Build
+                    </span>
+                    <h3 class="text-lg font-bold text-river-deep mb-2">Dual Biodigester Deployment</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Constructing a community-scale biodigester in <strong>Aladja Town</strong> and a higher-capacity market-waste biodigester at <strong>Pessu Market, Warri</strong> to supply clean cooking gas and organic fertilizer.
+                    </p>
+                </div>
+
+                <!-- Phase 4 (Scale) -->
+                <div class="rounded-3xl bg-white border border-slate-200/90 p-6">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-[11px] font-bold uppercase tracking-wider mb-4">
+                        Phase 4 • Scale
+                    </span>
+                    <h3 class="text-lg font-bold text-river-deep mb-2">Integrated Community &amp; Student WASH</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Reinvesting circular bioenergy revenues into public toilets, handwashing stations, and safe water infrastructure for markets, riverine settlements, and student hostel hubs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Planned Pilot Sites Comparison -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="rounded-2xl bg-white p-6 sm:p-7 border border-slate-200/90 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-river-leaf/15 text-river-leaf flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="waves" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-river-leaf">Planned Site 01 • Riverine Scale</span>
+                        <h4 class="text-lg font-extrabold text-river-deep mt-0.5">Aladja Town, Udu LGA</h4>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
+                            Designed as our riverine ecological anchor—pairing creek hyacinth harvesting with a community-sized biodigester scaled to neighborhood food waste, producing clean household cooking gas and smallholder fertilizer.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl bg-white p-6 sm:p-7 border border-slate-200/90 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-river-waterway/15 text-river-waterway flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="shopping-basket" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-river-waterway">Planned Site 02 • Commercial Market Scale</span>
+                        <h4 class="text-lg font-extrabold text-river-deep mt-0.5">Pessu Market, Warri South</h4>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
+                            Designed as a high-capacity urban biodigester capturing daily perishable market refuse before it pollutes waterfront drains—supplying biogas to market food vendors and funding public market WASH blocks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         7. COLLABORATE & CONTACT PORTAL
+    ====================================================================== -->
+    <section id="partner" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-river-waterway mb-3">
+                    <span class="w-6 h-0.5 bg-river-waterway"></span>
+                    Build With Us From Day One
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-river-deep tracking-tight">
+                    Collaborate With Our Founding Team
+                </h2>
+                <p class="mt-4 text-base text-slate-600 leading-relaxed">
+                    Whether you are a school principal booking a free climate assembly, a community leader in Aladja or Warri, a grant partner supporting early-stage climate ventures, or a technical advisor—we would love to hear from you.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Left 5 Cols: Stakeholder Pathway Quick-Select Cards -->
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3.5">
+                    <button type="button" onclick="selectStakeholder('Grant & Climate Seed Funding')" class="text-left p-4 rounded-2xl bg-river-sand hover:bg-river-deep hover:text-white border border-slate-200/90 transition-all group">
+                        <div class="flex items-center justify-between">
+                            <span class="font-heading font-bold text-sm text-river-deep group-hover:text-white">Grant &amp; Seed Partners</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-river-leaf"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 group-hover:text-slate-300 mt-1">Support baseline creek surveys, free school outreach, or pilot biodigester construction.</p>
+                    </button>
+
+                    <button type="button" onclick="selectStakeholder('Community & Market Leadership')" class="text-left p-4 rounded-2xl bg-river-sand hover:bg-river-deep hover:text-white border border-slate-200/90 transition-all group">
+                        <div class="flex items-center justify-between">
+                            <span class="font-heading font-bold text-sm text-river-deep group-hover:text-white">Community &amp; Market Leaders</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-river-waterway group-hover:text-river-leaf"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 group-hover:text-slate-300 mt-1">Co-design waterway clearing and market waste collection in Aladja, Warri, and Delta State.</p>
+                    </button>
+
+                    <button type="button" onclick="selectStakeholder('Biogas, Fertilizer & WASH Off-take')" class="text-left p-4 rounded-2xl bg-river-sand hover:bg-river-deep hover:text-white border border-slate-200/90 transition-all group">
+                        <div class="flex items-center justify-between">
+                            <span class="font-heading font-bold text-sm text-river-deep group-hover:text-white">Future Off-Takers &amp; Farmers</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-river-hyacinth group-hover:text-river-leaf"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 group-hover:text-slate-300 mt-1">Register early interest for clean cooking biogas or organic bio-slurry fertilizer.</p>
+                    </button>
+                </div>
+
+                <!-- Right 7 Cols: Contact Form -->
+                <div class="lg:col-span-7 bg-river-sand rounded-3xl p-6 sm:p-8 border border-slate-200/90">
+                    <form id="partner-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="full-name" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Your Name *</label>
+                                <input type="text" id="full-name" required placeholder="e.g. Engr. Tunde Okafor" class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                            </div>
+                            <div>
+                                <label for="organization" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Organization / Community</label>
+                                <input type="text" id="organization" placeholder="e.g. Delta Youth Eco Network" class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Email or Phone / WhatsApp *</label>
+                                <input type="text" id="contact-email" required placeholder="e.g. name@domain.com / 0803..." class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                            </div>
+                            <div>
+                                <label for="inquiry-type" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Collaboration Pathway</label>
+                                <select id="inquiry-type" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm focus:outline-none focus:border-river-waterway">
+                                    <option value="Grant & Climate Seed Funding">Grant &amp; Climate Seed Funding</option>
+                                    <option value="Community & Market Leadership">Community &amp; Market Leadership</option>
+                                    <option value="Biogas, Fertilizer & WASH Off-take">Biogas, Fertilizer &amp; WASH Off-take</option>
+                                    <option value="Technical / Academic Advisory">Technical / Academic Advisory</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-bold uppercase tracking-wider text-river-deep mb-1.5">Message *</label>
+                            <textarea id="message" rows="3" required placeholder="Tell us how you would like to collaborate with The Riparian Circular Solutions Limited..." class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-sm focus:outline-none focus:border-river-waterway"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-river-deep hover:bg-river-waterway text-white font-bold px-6 py-3.5 rounded-xl shadow-sm transition-all">
+                            <i data-lucide="send" class="w-4 h-4 text-river-leaf"></i>
+                            <span>Send Message to Founding Team</span>
+                        </button>
+                    </form>
+
+                    <!-- Instant Confirmation Box -->
+                    <div id="form-confirmation" class="hidden rounded-2xl bg-white border-2 border-river-leaf p-6 space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-river-leaf/15 text-river-leaf flex items-center justify-center">
+                                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-river-deep text-base">Message Received!</h4>
+                                <p class="text-xs text-slate-500">The Riparian Circular Solutions Limited (RC: 9999453)</p>
+                            </div>
+                        </div>
+                        <p id="confirmation-text" class="text-sm text-slate-700 leading-relaxed"></p>
+                        <button type="button" onclick="resetPartnerForm()" class="text-xs font-bold text-river-waterway hover:underline">
+                            Send another inquiry →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- =====================================================================
+         DEDICATED UN SDGs EDUCATIONAL PAGE / VIEW
+    ====================================================================== -->
+    <section id="sdg-page-view" class="hidden min-h-screen bg-river-sand">
+        <!-- Top Sub-Navigation Bar for Dedicated Page Feel -->
+        <div class="bg-river-deep text-white border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center gap-2 text-xs sm:text-sm">
+                    <button type="button" onclick="showMainView()" class="inline-flex items-center gap-1.5 text-slate-300 hover:text-white font-semibold transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4 text-river-leaf"></i>
+                        <span>Back to Main Overview</span>
+                    </button>
+                    <span class="text-slate-500">/</span>
+                    <span class="font-bold text-river-leaf">UN Sustainable Development Goals (SDGs) Guide</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="bookSdgWorkshop()" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-river-leaf hover:bg-river-leaf/90 text-white text-xs font-bold transition-all">
+                        <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+                        <span>Invite Us to Teach SDGs at Your School (Free)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1. Educational Hero: What Are the UN SDGs? -->
+        <div class="bg-gradient-to-b from-white via-river-sand to-river-sand pt-12 pb-14 sm:pt-16 sm:pb-20 border-b border-slate-200/80 subtle-grid">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-xs text-xs font-bold text-river-deep">
+                            <span class="w-2 h-2 rounded-full bg-river-waterway"></span>
+                            <span>Classroom &amp; Stakeholder Educational Guide • Agenda 2030</span>
+                        </div>
+                        <h1 class="text-3xl sm:text-5xl font-extrabold text-river-deep tracking-tight leading-[1.12]">
+                            Understanding the <span class="text-river-waterway">UN Sustainable Development Goals</span> in the Niger Delta
+                        </h1>
+                        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                            Adopted by all United Nations Member States in 2015, the <strong class="text-river-deep">17 Sustainable Development Goals (SDGs)</strong> form a shared global blueprint for peace, prosperity, and environmental protection by 2030.
+                        </p>
+                        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                            At <strong class="text-river-deep">The Riparian Circular Solutions Limited (RC: 9999453)</strong>, we translate global goals into practical local action—showing students, market leaders, and communities in <strong class="text-river-deep">Aladja Town</strong> and <strong class="text-river-deep">Warri</strong> how protecting a single creek connects clean water, clean energy, climate action, and public health.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-3 pt-2">
+                            <a href="#sdg-explorer-section" class="inline-flex items-center gap-2 bg-river-deep hover:bg-river-waterway text-white text-sm font-bold px-6 py-3 rounded-xl shadow-sm transition-all">
+                                <span>Explore Our 9 Aligned SDGs</span>
+                                <i data-lucide="arrow-down" class="w-4 h-4 text-river-leaf"></i>
+                            </a>
+                            <a href="#sdg-ripple-simulator" class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-river-deep border border-slate-300 text-sm font-bold px-6 py-3 rounded-xl transition-all">
+                                <i data-lucide="network" class="w-4 h-4 text-river-hyacinth"></i>
+                                <span>Try SDG Ripple Simulator</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3 Pillars of Sustainability Educational Card -->
+                    <div class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-lg space-y-5">
+                        <div class="border-b border-slate-100 pb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-river-waterway">SDG Core Principle</span>
+                            <h2 class="text-xl font-extrabold text-river-deep mt-0.5">Three Interconnected Pillars</h2>
+                            <p class="text-xs text-slate-500 mt-1">True sustainability balances people, planet, and local livelihoods simultaneously.</p>
+                        </div>
+
+                        <div class="space-y-3.5">
+                            <div class="p-4 rounded-2xl bg-river-sand border border-river-leaf/30 flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-river-leaf/15 text-river-leaf flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="trees" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-bold text-river-deep">1. Environmental Protection (Biosphere)</h3>
+                                    <p class="text-xs text-slate-600 mt-1">Clearing invasive water hyacinth, restoring aquatic oxygen (SDG 14), preventing methane emissions (SDG 13), and protecting mangroves.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-river-sand border border-river-waterway/30 flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-river-waterway/15 text-river-waterway flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-bold text-river-deep">2. Social Equity &amp; Education (Society)</h3>
+                                    <p class="text-xs text-slate-600 mt-1">Free climate workshops for local schools (SDG 4), hygienic public WASH facilities (SDG 6), and cleaner markets (SDG 11).</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-river-sand border border-river-hyacinth/30 flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-river-hyacinth/15 text-river-hyacinth flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="recycle" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-bold text-river-deep">3. Circular Local Economy (Economy)</h3>
+                                    <p class="text-xs text-slate-600 mt-1">Affordable renewable biogas (SDG 7), zero-waste organic fertilizer production (SDG 12), and green youth jobs (SDG 8).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Deep-Dive Alignment Cards & Interactive Filter -->
+        <div id="sdg-explorer-section" class="py-16 sm:py-20 bg-white border-b border-slate-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+                    <div class="max-w-2xl">
+                        <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-river-leaf mb-3">
+                            <span class="w-6 h-0.5 bg-river-leaf"></span>
+                            How Our Work Maps to Global Goals
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-river-deep tracking-tight">
+                            Our Core UN SDG Alignments
+                        </h2>
+                        <p class="mt-3 text-base text-slate-600">
+                            Filter by pillar to explore how our free school outreach, waterway restoration, biodigesters, and WASH infrastructure advance 9 specific Sustainable Development Goals.
+                        </p>
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="flex flex-wrap gap-2" id="sdg-filter-bar">
+                        <button type="button" onclick="filterSdgCards('all')" data-filter="all" class="sdg-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-river-deep text-white shadow-xs transition-all">
+                            All 9 Aligned SDGs
+                        </button>
+                        <button type="button" onclick="filterSdgCards('environment')" data-filter="environment" class="sdg-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-river-sand text-slate-700 border border-slate-200 hover:border-river-leaf transition-all">
+                            Environment &amp; Climate
+                        </button>
+                        <button type="button" onclick="filterSdgCards('energy')" data-filter="energy" class="sdg-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-river-sand text-slate-700 border border-slate-200 hover:border-river-waterway transition-all">
+                            Clean Energy &amp; Circularity
+                        </button>
+                        <button type="button" onclick="filterSdgCards('community')" data-filter="community" class="sdg-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-river-sand text-slate-700 border border-slate-200 hover:border-river-hyacinth transition-all">
+                            Education &amp; Community
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic SDG Deep-Dive Cards Grid -->
+                <div id="sdg-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Populated cleanly via JS with official UN SDG colors & custom inline SVG icons -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Interactive "Systems Connection Map / SDG Ripple Effect" Simulator -->
+        <div id="sdg-ripple-simulator" class="py-16 sm:py-20 bg-river-sand border-b border-slate-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-10">
+                    <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-river-hyacinth mb-3">
+                        <span class="w-6 h-0.5 bg-river-hyacinth"></span>
+                        Interactive Systems Thinking Tool
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-river-deep tracking-tight">
+                        The SDG Ripple Effect: How One Local Action Unlocks Multiple Goals
+                    </h2>
+                    <p class="mt-3 text-base text-slate-600">
+                        The UN SDGs are deeply interconnected—progress on one goal accelerates progress on others. Select any local action below to see the ecological, social, and economic chain reaction across the goals.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Left 5 Cols: Action Selector Buttons -->
+                    <div class="lg:col-span-5 space-y-3">
+                        <p class="text-xs font-bold uppercase tracking-wider text-slate-500 px-1">Select a Local Action to Simulate:</p>
+
+                        <button type="button" onclick="selectRippleAction(0)" id="ripple-btn-0" class="ripple-action-btn w-full text-left p-4 rounded-2xl border-2 border-river-deep bg-river-deep text-white shadow-sm transition-all">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase tracking-wider opacity-80">Action 01 • Waterway Stewardship</span>
+                                <i data-lucide="waves" class="w-4 h-4 text-river-leaf"></i>
+                            </div>
+                            <p class="font-heading font-bold text-base mt-1">Harvest 1 Tonne of Water Hyacinth from Aladja Creek</p>
+                        </button>
+
+                        <button type="button" onclick="selectRippleAction(1)" id="ripple-btn-1" class="ripple-action-btn w-full text-left p-4 rounded-2xl border-2 border-slate-200 bg-white text-river-deep hover:border-river-waterway transition-all">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Action 02 • Classroom Literacy</span>
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-river-hyacinth"></i>
+                            </div>
+                            <p class="font-heading font-bold text-base mt-1">Teach a Free Secondary School Climate &amp; SDG Workshop</p>
+                        </button>
+
+                        <button type="button" onclick="selectRippleAction(2)" id="ripple-btn-2" class="ripple-action-btn w-full text-left p-4 rounded-2xl border-2 border-slate-200 bg-white text-river-deep hover:border-river-waterway transition-all">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Action 03 • Circular Bioenergy</span>
+                                <i data-lucide="flame" class="w-4 h-4 text-amber-500"></i>
+                            </div>
+                            <p class="font-heading font-bold text-base mt-1">Co-Digest Pessu Market Food Waste &amp; Hyacinth into Biogas</p>
+                        </button>
+
+                        <button type="button" onclick="selectRippleAction(3)" id="ripple-btn-3" class="ripple-action-btn w-full text-left p-4 rounded-2xl border-2 border-slate-200 bg-white text-river-deep hover:border-river-waterway transition-all">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Action 04 • Sanitation Reinvestment</span>
+                                <i data-lucide="droplets" class="w-4 h-4 text-river-waterway"></i>
+                            </div>
+                            <p class="font-heading font-bold text-base mt-1">Build a Biogas-Linked Community WASH &amp; Toilet Block</p>
+                        </button>
+                    </div>
+
+                    <!-- Right 7 Cols: Live Chain Reaction & Lit-Up SDG Badges -->
+                    <div id="ripple-output-panel" class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+                        <!-- Dynamically populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Classroom-Ready "All 17 UN SDGs Quick Reference Grid" -->
+        <div class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+                    <div class="max-w-3xl">
+                        <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-river-waterway mb-3">
+                            <span class="w-6 h-0.5 bg-river-waterway"></span>
+                            Classroom Teaching Aid
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-river-deep tracking-tight">
+                            The Complete 17 UN SDGs Quick Reference Grid
+                        </h2>
+                        <p class="mt-3 text-base text-slate-600">
+                            Designed for teachers, students, and eco-clubs participating in our free school workshops. Highlighted tiles show the <strong class="text-river-deep">9 SDGs</strong> directly connected to Riparian Circular Solutions' mission.
+                        </p>
+                    </div>
+
+                    <div class="flex items-center gap-4 text-xs font-semibold">
+                        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-river-sand border border-river-deep/30 text-river-deep">
+                            <span class="w-2.5 h-2.5 rounded-full bg-river-leaf"></span>
+                            Direct Riparian Focus (9 Goals)
+                        </span>
+                        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-500">
+                            <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+                            Broader UN 2030 Framework
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 17 Goals Visual Matrix -->
+                <div id="all-17-sdgs-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 mb-12">
+                    <!-- Populated via JS -->
+                </div>
+
+                <!-- Classroom CTA Banner -->
+                <div class="rounded-3xl bg-river-deep text-white p-7 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-lg">
+                    <div class="space-y-2 max-w-2xl">
+                        <span class="inline-block px-3 py-1 rounded-full bg-river-leaf text-white text-xs font-bold uppercase tracking-wider">
+                            100% Free for Schools &amp; Youth Clubs
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold">
+                            Want Our Team to Teach the UN SDGs at Your School?
+                        </h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            We bring interactive SDG lessons, local Niger Delta case studies, and biodigester science demonstrations straight to your school assembly or science club at zero cost.
+                        </p>
+                    </div>
+                    <button type="button" onclick="bookSdgWorkshop()" class="inline-flex items-center justify-center gap-2.5 bg-river-leaf hover:bg-river-leaf/90 text-white font-bold px-7 py-4 rounded-xl shadow-md transition-all flex-shrink-0">
+                        <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                        <span>Book Free SDG School Visit</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         8. FOOTER
+    ====================================================================== -->
+    <footer class="bg-river-deep text-white pt-14 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/15">
+                <!-- Brand Column -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-white p-1.5 flex-shrink-0">
+                            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="riparianFooterGrad" x1="65" y1="75" x2="155" y2="135" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#6B9E48"/>
+                                        <stop offset="55%" stop-color="#3B8778"/>
+                                        <stop offset="100%" stop-color="#2A7886"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M 15 104 C 15 52, 56 18, 104 18 C 147 18, 180 48, 187 86 C 175 74, 162 67, 148 64 C 136 42, 114 31, 88 34 C 54 38, 28 65, 15 104 Z" fill="#6B9E48"/>
+                                <path d="M 35 68 C 52 46, 80 39, 102 41 C 94 64, 72 80, 44 82 C 32 83, 23 89, 16 98 C 20 86, 26 76, 35 68 Z" fill="#6B9E48"/>
+                                <path d="M 114 77 C 102 74, 96 63, 97 50 C 108 52, 117 61, 118 73 C 118 75, 116 77, 114 77 Z" fill="#8E6BB0"/>
+                                <path d="M 121 67 C 113 57, 114 43, 123 34 C 132 42, 134 55, 127 66 C 125 68, 122 68, 121 67 Z" fill="#8E6BB0"/>
+                                <path d="M 108 92 C 114 84, 122 76, 124 67 C 127 57, 134 50, 143 49 C 147 63, 143 79, 132 90 C 124 98, 120 105, 123 114 C 114 109, 107 100, 108 92 Z" fill="#4D8B5E"/>
+                                <path d="M 20 118 C 23 88, 48 68, 78 72 C 100 75, 113 92, 123 108 C 134 124, 156 128, 174 114 C 166 136, 142 148, 118 144 C 95 140, 82 118, 66 102 C 50 87, 27 93, 20 118 Z" fill="url(#riparianFooterGrad)"/>
+                                <path d="M 134 121 C 155 123, 170 106, 166 74 C 181 80, 190 97, 187 117 C 183 144, 156 164, 125 162 C 98 160, 82 142, 68 124 C 55 107, 36 105, 31 124 C 28 110, 38 97, 54 98 C 72 99, 85 117, 99 132 C 116 149, 146 151, 166 131 C 156 136, 143 133, 134 121 Z" fill="#2A7886"/>
+                                <path d="M 33 112 C 23 125, 22 146, 33 163 C 50 188, 86 198, 121 190 C 157 182, 183 153, 188 120 C 175 147, 147 167, 114 168 C 84 169, 66 150, 54 130 C 46 117, 38 111, 33 112 Z" fill="#124552"/>
+                                <path d="M 52 117 C 40 123, 39 144, 51 161 C 63 177, 84 184, 102 183 C 83 178, 67 167, 58 151 C 50 137, 51 123, 57 118 Z" fill="#82A7AE"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-heading font-extrabold text-white text-lg tracking-tight leading-none">RIPARIAN</p>
+                            <p class="text-[11px] font-semibold tracking-[0.14em] text-slate-300 uppercase mt-1">CIRCULAR SOLUTIONS</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed max-w-md">
+                        Building from the ground up in Delta State. We start with ecological education, free school climate workshops, and community stewardship—laying the foundation for biodigester-powered waterway restoration in Aladja and Warri.
+                    </p>
+                    <p class="text-xs font-semibold text-river-leaf">
+                        The Riparian Circular Solutions Limited • RC: 9999453
+                    </p>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Explore</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li><a href="#ecology-101" onclick="showMainView()" class="hover:text-white transition-colors">Why Water Hyacinth Matters</a></li>
+                        <li><a href="#biodigester-visualizer" onclick="showMainView()" class="hover:text-white transition-colors">Biodigester Tech Visualizer</a></li>
+                        <li><a href="#free-schools" onclick="showMainView()" class="hover:text-white transition-colors">Free School Climate Program</a></li>
+                        <li><button type="button" onclick="showSdgView()" class="text-river-leaf hover:text-white font-semibold transition-colors text-left">UN SDGs Educational Guide</button></li>
+                        <li><a href="#roadmap" onclick="showMainView()" class="hover:text-white transition-colors">4-Phase Launch Roadmap</a></li>
+                        <li><a href="#partner" onclick="showMainView()" class="hover:text-white transition-colors">Collaborate With Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Operational Locations -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Foundation &amp; Focus</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-river-leaf"></i>
+                            <span>CAC Registration: RC 9999453</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="graduation-cap" class="w-4 h-4 text-river-leaf"></i>
+                            <span>Free School Outreach Across Southern Nigeria</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-river-leaf"></i>
+                            <span>Planned Pilots: Aladja Town &amp; Pessu Market, Warri</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-river-leaf"></i>
+                            <span>Planned Pilots: Aladja Town &amp; Pessu Market</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="droplets" class="w-4 h-4 text-river-leaf"></i>
+                            <span>SDG 4 (Education), SDG 6 (WASH), SDG 7, 13 &amp; 14</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                <p>&copy; 2026 The Riparian Circular Solutions Limited (RC: 9999453). All rights reserved.</p>
+                <p>Ecological Restoration • Free Climate Education • Circular Bioenergy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         JAVASCRIPT INTERACTIVITY
+    ====================================================================== -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Global View State (Declared at top to avoid Temporal Dead Zone errors)
+        let currentPageView = 'main';
+
+        // 1. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Interactive Biodigester Technology Visualizer
+        const visualizerSteps = [
+            {
+                badge: 'STEP 01 OF 04 • INPUT PREPARATION',
+                badgeClass: 'bg-river-leaf/15 text-river-leaf',
+                title: 'Feedstock Prep & Co-Digestion Inlet',
+                description: 'Harvested water hyacinth is high in fibrous carbon, while market fruit and vegetable scraps are rich in nitrogen. Chopping and mixing them with water in the inlet hopper creates an ideal Carbon-to-Nitrogen (C:N) balance so microbes digest efficiently without clogging.',
+                boxTitle: 'Why Co-Digestion Works Better:',
+                bullets: [
+                    'Water hyacinth provides structural fiber and steady moisture.',
+                    'Market food scraps boost methane yield and prevent acid buildup.'
+                ],
+                nextIndex: 1,
+                nextLabel: 'Next: Anaerobic Chamber'
+            },
+            {
+                badge: 'STEP 02 OF 04 • BIOLOGICAL DIGESTION',
+                badgeClass: 'bg-river-waterway/15 text-river-waterway',
+                title: 'Zero-Oxygen Anaerobic Chamber',
+                description: 'Inside the sealed underground tank, naturally occurring anaerobic bacteria break down organic matter in the complete absence of oxygen. Maintaining a warm mesophilic temperature (35–38°C) and neutral pH (6.8–7.2) converts biomass into biogas over 25–35 days.',
+                boxTitle: 'What Happens Inside the Chamber:',
+                bullets: [
+                    'Hydrolysis & acidogenesis break complex plant fibers into simple organic acids.',
+                    'Methanogenic microbes convert those acids into clean methane gas.'
+                ],
+                nextIndex: 2,
+                nextLabel: 'Next: Biogas Dome'
+            },
+            {
+                badge: 'STEP 03 OF 04 • GAS CAPTURE & SCRUBBING',
+                badgeClass: 'bg-amber-100 text-amber-800',
+                title: 'Biogas Dome & Purification',
+                description: 'As biogas rises from the liquid slurry, it collects under pressure in the sealed upper dome. Before reaching any stove, the gas passes through a simple scrubber to remove trace moisture and hydrogen sulfide (H₂S), ensuring a clean, odor-free blue flame.',
+                boxTitle: 'Clean Fuel Composition:',
+                bullets: [
+                    'Typically 55%–65% biomethane (CH₄) for high-heat clean cooking.',
+                    'Captures greenhouse gas that would otherwise escape from rotting waste.'
+                ],
+                nextIndex: 3,
+                nextLabel: 'Next: Dual Outputs'
+            },
+            {
+                badge: 'STEP 04 OF 04 • CIRCULAR COMMUNITY VALUE',
+                badgeClass: 'bg-river-hyacinth/15 text-river-hyacinth',
+                title: 'Clean Cooking Gas, Organic Fertilizer & WASH',
+                description: 'A biodigester produces two valuable outputs with zero waste: clean biogas piped to market kitchens and households (saving mangrove trees from firewood cutting), plus nutrient-rich liquid bio-slurry that acts as a pathogen-reduced organic fertilizer for local farmers.',
+                boxTitle: 'Funding Public WASH:',
+                bullets: [
+                    'Revenues from biogas and fertilizer help fund public toilets and handwashing stations.',
+                    'Closes the sanitation loop across markets, riverine towns, and student hubs.'
+                ],
+                nextIndex: 0,
+                nextLabel: 'Restart: Step 01 Inlet'
+            }
+        ];
+
+        let currentVizStep = 0;
+        let isVizPlaying = true;
+        let vizInterval = null;
+
+        function renderVisualizerStep(index) {
+            currentVizStep = index;
+
+            // Update stepper button styles
+            for (let i = 0; i < 4; i++) {
+                const btn = document.getElementById(`viz-step-btn-${i}`);
+                if (!btn) continue;
+                const stepLabel = btn.querySelector('span');
+                if (i === index) {
+                    btn.className = 'viz-step-btn text-left p-4 rounded-2xl border-2 border-river-deep bg-river-deep text-white shadow-sm transition-all';
+                    if (stepLabel) stepLabel.className = 'text-[11px] font-bold uppercase tracking-wider opacity-80 block';
+                } else {
+                    btn.className = 'viz-step-btn text-left p-4 rounded-2xl border-2 border-slate-200 bg-white text-river-deep hover:border-river-waterway transition-all';
+                    if (stepLabel) stepLabel.className = 'text-[11px] font-bold uppercase tracking-wider text-slate-400 block';
+                }
+
+                // Highlight active zone in SVG
+                const zone = document.getElementById(`svg-zone-${i}`);
+                const ring = document.getElementById(`svg-ring-${i}`);
+                if (zone && ring) {
+                    zone.style.opacity = (i === index) ? '1' : '0.45';
+                    ring.setAttribute('opacity', (i === index) ? '1' : '0');
+                }
+            }
+
+            // Update explanation card
+            const data = visualizerSteps[index];
+            const card = document.getElementById('viz-explanation-card');
+            if (!card) return;
+            card.innerHTML = `
+                <div class="space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full ${data.badgeClass} text-xs font-bold">
+                        <span>${data.badge}</span>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-river-deep">
+                        ${data.title}
+                    </h3>
+                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                        ${data.description}
+                    </p>
+                    <div class="p-4 rounded-2xl bg-river-sand border border-slate-200/80 space-y-2.5">
+                        <p class="text-xs font-bold uppercase tracking-wider text-river-deep">${data.boxTitle}</p>
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            ${data.bullets.map(b => `
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-river-leaf flex-shrink-0 mt-0.5"></i>
+                                    <span>${b}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-medium text-slate-400">Click any diagram section to inspect</span>
+                    <button type="button" onclick="setVisualizerStep(${data.nextIndex})" class="inline-flex items-center gap-1.5 text-xs font-bold text-river-waterway hover:underline">
+                        ${data.nextLabel} <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            `;
+            lucide.createIcons();
+        }
+
+        function setVisualizerStep(index) {
+            renderVisualizerStep(index);
+            if (isVizPlaying) {
+                restartVisualizerTimer();
+            }
+        }
+
+        function restartVisualizerTimer() {
+            clearInterval(vizInterval);
+            vizInterval = setInterval(() => {
+                const next = (currentVizStep + 1) % 4;
+                renderVisualizerStep(next);
+            }, 4500);
+        }
+
+        function toggleVisualizerPlay() {
+            const btnLabel = document.getElementById('play-label');
+            const btnIcon = document.getElementById('play-icon');
+            if (isVizPlaying) {
+                isVizPlaying = false;
+                clearInterval(vizInterval);
+                btnLabel.textContent = 'Play Auto-Cycle';
+                btnIcon.setAttribute('data-lucide', 'play');
+            } else {
+                isVizPlaying = true;
+                restartVisualizerTimer();
+                btnLabel.textContent = 'Pause Auto-Cycle';
+                btnIcon.setAttribute('data-lucide', 'pause');
+            }
+            lucide.createIcons();
+        }
+
+        // Start Visualizer on load
+        renderVisualizerStep(0);
+        restartVisualizerTimer();
+
+        // 3. Interactive Pilot Science Sandbox Calculations
+        const hyacinthInput = document.getElementById('hyacinth-input');
+        const wasteInput = document.getElementById('waste-input');
+
+        function updateImpactCalculations() {
+            const hyacinthTonnes = parseFloat(hyacinthInput.value);
+            const wasteTonnes = parseFloat(wasteInput.value);
+
+            document.getElementById('hyacinth-val').textContent = hyacinthTonnes.toLocaleString();
+            document.getElementById('waste-val').textContent = wasteTonnes.toLocaleString();
+
+            const areaCleared = Math.round(hyacinthTonnes * 40);
+            const biogasGenerated = Math.round((hyacinthTonnes * 25) + (wasteTonnes * 60));
+            const fertilizerProduced = Math.round((hyacinthTonnes * 220) + (wasteTonnes * 320));
+            const co2Avoided = ((hyacinthTonnes * 0.32) + (wasteTonnes * 0.65)).toFixed(1);
+
+            document.getElementById('out-area').textContent = areaCleared.toLocaleString();
+            document.getElementById('out-biogas').textContent = biogasGenerated.toLocaleString();
+            document.getElementById('out-fertilizer').textContent = fertilizerProduced.toLocaleString();
+            document.getElementById('out-co2').textContent = Number(co2Avoided).toLocaleString(undefined, {
+                minimumFractionDigits: 1,
+                maximumFractionDigits: 1
+            });
+        }
+
+        function setEstimatorPreset(hyacinth, waste) {
+            hyacinthInput.value = hyacinth;
+            wasteInput.value = waste;
+            updateImpactCalculations();
+        }
+
+        hyacinthInput.addEventListener('input', updateImpactCalculations);
+        wasteInput.addEventListener('input', updateImpactCalculations);
+        updateImpactCalculations();
+
+        // 4. Free School Outreach Booking Form Logic
+        function preselectSchoolModule(moduleName) {
+            const selectEl = document.getElementById('school-module');
+            selectEl.value = moduleName;
+            document.getElementById('school-booking-box').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            document.getElementById('school-name').focus();
+        }
+
+        const schoolForm = document.getElementById('school-booking-form');
+        const schoolConfirmation = document.getElementById('school-confirmation');
+        const schoolConfirmationText = document.getElementById('school-confirmation-text');
+
+        schoolForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const schoolName = document.getElementById('school-name').value.trim();
+            const location = document.getElementById('school-location').value.trim();
+            const contactPerson = document.getElementById('school-contact-name').value.trim();
+            const moduleChoice = document.getElementById('school-module').value;
+            const preferredDate = document.getElementById('school-date').value;
+
+            const dateNote = preferredDate ? ` for <strong>${preferredDate}</strong>` : '';
+            schoolConfirmationText.innerHTML = `Thank you, <strong>${contactPerson}</strong>! We have logged a <strong>100% free outreach request</strong> for <strong>${schoolName}</strong> (${location}) covering <strong>${moduleChoice}</strong>${dateNote}. Our Southern Nigeria education outreach team will reach out shortly to confirm logistics.`;
+
+            schoolForm.classList.add('hidden');
+            schoolConfirmation.classList.remove('hidden');
+        });
+
+        function resetSchoolForm() {
+            schoolForm.reset();
+            schoolConfirmation.classList.add('hidden');
+            schoolForm.classList.remove('hidden');
+        }
+
+        // 5. General Collaboration / Stakeholder Pathway Logic
+        function selectStakeholder(pathway) {
+            const selectEl = document.getElementById('inquiry-type');
+            selectEl.value = pathway;
+            document.getElementById('partner-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            document.getElementById('full-name').focus();
+        }
+
+        const partnerForm = document.getElementById('partner-form');
+        const formConfirmation = document.getElementById('form-confirmation');
+        const confirmationText = document.getElementById('confirmation-text');
+
+        partnerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('full-name').value.trim();
+            const org = document.getElementById('organization').value.trim();
+            const pathway = document.getElementById('inquiry-type').value;
+
+            const orgSuffix = org ? ` from <strong>${org}</strong>` : '';
+            confirmationText.innerHTML = `Thank you, <strong>${name}</strong>${orgSuffix}. Your message regarding <strong>${pathway}</strong> has been received by our founding team in Delta State. We appreciate your support as we build from the ground up.`;
+
+            partnerForm.classList.add('hidden');
+            formConfirmation.classList.remove('hidden');
+        });
+
+        function resetPartnerForm() {
+            partnerForm.reset();
+            formConfirmation.classList.add('hidden');
+            partnerForm.classList.remove('hidden');
+        }
+
+        // =====================================================================
+        // 6. DEDICATED UN SDGs PAGE / VIEW LOGIC & INTERACTIVE WIDGETS
+        // =====================================================================
+        function showSdgView() {
+            currentPageView = 'sdg';
+            document.getElementById('main-site-view').classList.add('hidden');
+            document.getElementById('sdg-page-view').classList.remove('hidden');
+
+            // Update header navigation states
+            const navSdgBtn = document.getElementById('nav-sdg-btn');
+            navSdgBtn.className = 'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-bold bg-river-deep text-white shadow-xs transition-all';
+
+            document.getElementById('view-switch-text').textContent = 'Back to Main Site';
+            document.getElementById('view-switch-icon').setAttribute('data-lucide', 'home');
+            lucide.createIcons();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showMainView() {
+            if (currentPageView === 'main') return;
+            currentPageView = 'main';
+            document.getElementById('sdg-page-view').classList.add('hidden');
+            document.getElementById('main-site-view').classList.remove('hidden');
+
+            // Reset header navigation states
+            const navSdgBtn = document.getElementById('nav-sdg-btn');
+            navSdgBtn.className = 'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-river-waterway bg-river-waterway/10 hover:bg-river-waterway hover:text-white transition-all';
+
+            document.getElementById('view-switch-text').textContent = 'Explore UN SDGs';
+            document.getElementById('view-switch-icon').setAttribute('data-lucide', 'globe-2');
+            lucide.createIcons();
+        }
+
+        function togglePageView() {
+            if (currentPageView === 'main') {
+                showSdgView();
+            } else {
+                showMainView();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function bookSdgWorkshop() {
+            showMainView();
+            setTimeout(() => {
+                preselectSchoolModule('Module 5: UN SDGs & Local Action in the Niger Delta');
+            }, 80);
+        }
+
+        // Core 9 Aligned UN SDGs Data with Official Colors & Custom Inline SVG Icons
+        const coreSdgData = [
+            {
+                number: 6,
+                title: 'Clean Water and Sanitation',
+                color: '#26BDE2',
+                category: 'environment',
+                pillarLabel: 'Environment & WASH',
+                summary: 'Removing suffocating water hyacinth mats to restore creek flow and water quality, while building hygienic public WASH infrastructure.',
+                riparianAction: 'Clearing blocked river corridors in Aladja Town and reinvesting circular bioenergy revenues into public toilets and handwashing stations for markets, riverine settlements, and student hubs.',
+                targetRef: 'Targets 6.2, 6.3 & 6.6',
+                svg: '<svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M24 6C24 6 12 20 12 29C12 35.6 17.4 41 24 41C30.6 41 36 35.6 36 29C36 20 24 6 24 6Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 30C18 33.3 20.7 36 24 36" stroke-linecap="round"/></svg>'
+            },
+            {
+                number: 7,
+                title: 'Affordable and Clean Energy',
+                color: '#FCC30B',
+                textDark: true,
+                category: 'energy',
+                pillarLabel: 'Clean Energy',
+                summary: 'Converting harvested aquatic weeds and organic market waste into clean, renewable biogas via sealed anaerobic biodigesters.',
+                riparianAction: 'Supplying clean cooking gas to Pessu Market food vendors and Aladja households—reducing dependence on expensive fossil fuels and mangrove firewood.',
+                targetRef: 'Targets 7.1 & 7.2',
+                svg: '<svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="24" r="9"/><path d="M24 6V10M24 38V42M6 24H10M38 24H42M11.3 11.3L14.1 14.1M33.9 33.9L36.7 36.7M36.7 11.3L33.9 14.1M14.1 33.9L11.3 36.7" stroke-linecap="round"/></svg>'
+            },
+            {
+                number: 13,
+                title: 'Climate Action',
+                color: '#3F7E44',
+                category: 'environment',
+                pillarLabel: 'Climate & Literacy',
+                summary: 'Preventing methane emissions from rotting water hyacinth and open-dumped organic waste, paired with grassroots climate education.',
+                riparianAction: 'Capturing biomethane inside sealed digesters instead of letting waste decompose anaerobically in creeks/dumps, while delivering free climate workshops in schools.',
+                targetRef: 'Targets 13.1 & 13.3',
+                svg: '<svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="24" r="16"/><path d="M8 24H40M24 8C28.5 13 31 18.5 31 24C31 29.5 28.5 35 24 40M24 8C19.5 13 17 18.5 17 24C17 29.5 19.5 35 24 40" stroke-linecap="round"/></svg>'
+            },
+            {
+                number: 14,
+                title: 'Life Below Water',
+                color: '#0A97D9',
+                category: 'environment',
+                pillarLabel: 'Aquatic Ecology',
+                summary: 'Restoring sunlight penetration, dissolved oxygen levels, and breeding habitats for native Niger Delta fish and aquatic biodiversity.',
+                riparianAction: 'Prioritizing ecological protection first—removing dense hyacinth canopies that suffocate creeks and preventing nutrient runoff from entering waterways.',
+                targetRef: 'Targets 14.1 & 14.2',
+                svg: '<svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 18C13 14 19 14 24 18C29 22 35 22 40 18" stroke-linecap="round"/><path d="M12 30C17 25 25 25 32 30L38 26V34L32 30C25 35 17 35 12 30Z" stroke-linejoin="round"/></svg>'
+            },
+            {
+                number: 4,
+                title: 'Quality Education',
+                color: '#C5192D',
+                category: 'community',
+                pillarLabel: 'Free School Outreach',
+                summary: 'Ensuring learners acquire practical knowledge and skills needed to promote sustainable development and environmental stewardship.',
+                riparianAction: 'Offering 100% free climate change, waterway ecology, circular economy, and WASH workshops to primary, secondary, and tertiary schools across Warri and Aladja.',
+                targetRef: 'Target 4.7',
+                svg: '<svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 12H21C22.7 12 24 13.3 24 15V38C24 36.3 22.7 35 21 35H8V12Z" stroke-linejoin="round"/><path d="M40 12H27C25.3 12 24 13.3 24 15V38C24 36.3 25.3 35 27 35H40V12Z" stroke-linejoin="round"/></svg>'
+            },
+            {
+                number: 11,
+                title: 'Sustainable Cities & Communities',
+                color: '#FD9D24',
+                category: 'community',
+                pillarLabel: 'Clean Markets & Creeks',
+                summary: 'Making riverine towns and urban market hubs cleaner, safer, and more resilient through community-led waste and waterway management.',
+                riparianAction: 'Keeping river transport corridors open for Aladja residents and eliminating foul organic waste piles at Pessu Market, Warri.',
+                targetRef: 'Targets 11.6 & 11.A',
+                svg: '<svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="8" y="20" width="12" height="20" rx="1"/><rect x="24" y="10" width="16" height="30" rx="1"/><path d="M13 26H15M13 32H15M29 16H31M34 16H36M29 22H31M34 22H36M29 28H31M34 28H36" stroke-linecap="round"/></svg>'
+            },
+            {
+                number: 12,
+                title: 'Responsible Consumption & Production',
+                color: '#BF8B2E',
+                category: 'energy',
+                pillarLabel: 'Zero-Waste Loop',
+                summary: 'Transforming organic waste streams into valuable closed-loop inputs rather than linear pollution.',
+                riparianAction: 'Co-digesting perishable food waste and invasive aquatic biomass into clean biogas and nutrient-rich organic bio-slurry fertilizer for local farmers.',
+                targetRef: 'Targets 12.3 & 12.5',
+                svg: '<svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 18C13 18 10 21 10 25C10 29 13 32 18 32C23 32 25 18 30 18C35 18 38 21 38 25C38 29 35 32 30 32" stroke-linecap="round"/><path d="M27 29L30 32L27 35" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+            },
+            {
+                number: 8,
+                title: 'Decent Work & Economic Growth',
+                color: '#A21942',
+                category: 'community',
+                pillarLabel: 'Green Livelihoods',
+                summary: 'Creating dignified local green jobs in ecological restoration, waste aggregation, biodigester operations, and sanitation upkeep.',
+                riparianAction: 'Training and engaging local youth and market stewards in Aladja and Warri as paid environmental operators as pilot facilities scale.',
+                targetRef: 'Targets 8.3 & 8.4',
+                svg: '<svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 36V26M19 36V20M28 36V24M37 36V14" stroke-linecap="round"/><path d="M10 22L19 15L28 19L37 10" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+            },
+            {
+                number: 17,
+                title: 'Partnerships for the Goals',
+                color: '#19486A',
+                category: 'community',
+                pillarLabel: 'Multi-Stakeholder',
+                summary: 'Mobilizing collaboration across schools, traditional leaders, market unions, technical engineers, and climate grant partners.',
+                riparianAction: 'Building transparent, ground-up coalitions in Delta State so infrastructure is co-owned by the communities it serves.',
+                targetRef: 'Targets 17.16 & 17.17',
+                svg: '<svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="14" r="5"/><circle cx="14" cy="32" r="5"/><circle cx="34" cy="32" r="5"/><path d="M21 18L16 28M27 18L32 28M19 32H29" stroke-linecap="round"/></svg>'
+            }
+        ];
+
+        function renderSdgCards(filter = 'all') {
+            const grid = document.getElementById('sdg-cards-grid');
+            const filtered = filter === 'all' ? coreSdgData : coreSdgData.filter(item => item.category === filter);
+
+            grid.innerHTML = filtered.map(sdg => `
+                <div class="rounded-3xl bg-river-sand border border-slate-200/90 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <!-- Official UN SDG Color Header Banner -->
+                        <div class="p-5 flex items-center justify-between" style="background-color: ${sdg.color}; color: ${sdg.textDark ? '#1E293B' : '#FFFFFF'};">
+                            <div class="flex items-center gap-3.5">
+                                <span class="font-heading font-extrabold text-3xl leading-none">${sdg.number}</span>
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider opacity-85 block">${sdg.pillarLabel}</span>
+                                    <h3 class="font-heading font-bold text-base leading-tight">${sdg.title}</h3>
+                                </div>
+                            </div>
+                            <div class="flex-shrink-0 opacity-90">
+                                ${sdg.svg}
+                            </div>
+                        </div>
+
+                        <!-- Card Educational Body -->
+                        <div class="p-6 space-y-4">
+                            <div>
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Global Goal Overview</p>
+                                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${sdg.summary}</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white border border-slate-200/80">
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-river-deep mb-1">Riparian Circular Solutions Alignment</p>
+                                <p class="text-xs text-slate-600 leading-relaxed">${sdg.riparianAction}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-3.5 bg-white border-t border-slate-200/70 flex items-center justify-between text-xs">
+                        <span class="font-semibold text-slate-500">UN ${sdg.targetRef}</span>
+                        <span class="font-bold" style="color: ${sdg.textDark ? '#B45309' : sdg.color};">SDG ${sdg.number} Aligned</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterSdgCards(category) {
+            document.querySelectorAll('.sdg-filter-btn').forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.className = 'sdg-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-river-deep text-white shadow-xs transition-all';
+                } else {
+                    btn.className = 'sdg-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-river-sand text-slate-700 border border-slate-200 hover:border-river-waterway transition-all';
+                }
+            });
+            renderSdgCards(category);
+        }
+
+        // Interactive SDG Ripple Effect Simulator Data
+        const rippleScenarios = [
+            {
+                actionTitle: 'Harvesting 1 Tonne of Water Hyacinth from Aladja Creek',
+                subtitle: 'How physical river cleanup triggers a 5-goal ecological and social chain reaction:',
+                triggeredSdgs: [
+                    { num: 14, name: 'Life Below Water', color: '#0A97D9' },
+                    { num: 6, name: 'Clean Water & Sanitation', color: '#26BDE2' },
+                    { num: 13, name: 'Climate Action', color: '#3F7E44' },
+                    { num: 7, name: 'Affordable & Clean Energy', color: '#FCC30B', dark: true },
+                    { num: 11, name: 'Sustainable Communities', color: '#FD9D24' }
+                ],
+                chain: [
+                    { step: '1. Immediate Ecological Relief (SDG 14 & SDG 6)', detail: 'Removing ~40 m² of dense floating hyacinth allows sunlight back into the creek, boosting dissolved oxygen for native fish and reopening boat corridors for Aladja residents (SDG 11).' },
+                    { step: '2. Methane Prevention (SDG 13)', detail: 'Instead of dying, sinking, and rotting on the riverbed—which releases potent methane gas—the biomass is safely channeled into a sealed biodigester.' },
+                    { step: '3. Clean Energy & Fertilizer Output (SDG 7 & SDG 12)', detail: 'Anaerobic digestion converts the harvested weeds into ~25 m³ of clean cooking biogas and ~220 kg of organic bio-slurry fertilizer.' }
+                ]
+            },
+            {
+                actionTitle: 'Teaching a Free Secondary School Climate & SDG Workshop',
+                subtitle: 'How classroom environmental literacy multiplies community-wide impact:',
+                triggeredSdgs: [
+                    { num: 4, name: 'Quality Education', color: '#C5192D' },
+                    { num: 13, name: 'Climate Action', color: '#3F7E44' },
+                    { num: 6, name: 'Clean Water & Sanitation', color: '#26BDE2' },
+                    { num: 12, name: 'Responsible Consumption', color: '#BF8B2E' },
+                    { num: 17, name: 'Partnerships for Goals', color: '#19486A' }
+                ],
+                chain: [
+                    { step: '1. Practical Sustainability Literacy (SDG 4 & SDG 13)', detail: 'Students in Warri and Aladja connect global climate science to their own local creeks—learning why drain dumping feeds water hyacinth blooms.' },
+                    { step: '2. Household Hygiene & Waste Habits (SDG 6 & SDG 12)', detail: 'Students carry waste-segregation and WASH hygiene practices home to their families, reducing untreated organic runoff entering local waterways.' },
+                    { step: '3. Next-Generation Green Stewards (SDG 17)', detail: 'School eco-clubs partner with our team on youth-led environmental awareness and future community cleanups.' }
+                ]
+            },
+            {
+                actionTitle: 'Co-Digesting Pessu Market Food Waste & Hyacinth into Biogas',
+                subtitle: 'How circular engineering solves urban market pollution and clean cooking access:',
+                triggeredSdgs: [
+                    { num: 7, name: 'Affordable & Clean Energy', color: '#FCC30B', dark: true },
+                    { num: 12, name: 'Responsible Consumption', color: '#BF8B2E' },
+                    { num: 11, name: 'Sustainable Communities', color: '#FD9D24' },
+                    { num: 13, name: 'Climate Action', color: '#3F7E44' },
+                    { num: 8, name: 'Decent Work & Growth', color: '#A21942' }
+                ],
+                chain: [
+                    { step: '1. Eliminating Market Waste Dumps (SDG 11 & SDG 12)', detail: 'Perishable fruit and vegetable scraps at Pessu Market are collected before rotting in open piles or washing into the Warri River.' },
+                    { step: '2. Clean Cooking Fuel & Mangrove Protection (SDG 7 & SDG 13)', detail: 'Captured biogas replaces charcoal and firewood for market food vendors—reducing indoor smoke and saving Niger Delta mangrove trees.' },
+                    { step: '3. Local Green Jobs & Organic Fertilizer (SDG 8)', detail: 'Creates steady local employment in waste collection, digester operation, and organic bio-slurry distribution to Delta farmers.' }
+                ]
+            },
+            {
+                actionTitle: 'Building a Biogas-Linked Community WASH & Toilet Block',
+                subtitle: 'How circular bioenergy revenues directly fund public sanitation:',
+                triggeredSdgs: [
+                    { num: 6, name: 'Clean Water & Sanitation', color: '#26BDE2' },
+                    { num: 11, name: 'Sustainable Communities', color: '#FD9D24' },
+                    { num: 14, name: 'Life Below Water', color: '#0A97D9' },
+                    { num: 8, name: 'Decent Work & Growth', color: '#A21942' },
+                    { num: 17, name: 'Partnerships for Goals', color: '#19486A' }
+                ],
+                chain: [
+                    { step: '1. Dignified Public Sanitation (SDG 6 & SDG 11)', detail: 'Revenues from biogas and organic fertilizer help finance clean public toilets and handwashing stations in underserved riverine towns, markets, and student areas.' },
+                    { step: '2. Ending Open Defecation into Creeks (SDG 14)', detail: 'Safe containment and biodigestion of human and organic waste stops pathogen and nutrient pollution from entering Niger Delta waterways.' },
+                    { step: '3. Self-Sustaining Community Infrastructure (SDG 8 & SDG 17)', detail: 'Co-managed with local market unions and community leaders so facilities stay clean, staffed, and maintained long-term.' }
+                ]
+            }
+        ];
+
+        function selectRippleAction(index) {
+            for (let i = 0; i < 4; i++) {
+                const btn = document.getElementById(`ripple-btn-${i}`);
+                const label = btn.querySelector('span');
+                if (i === index) {
+                    btn.className = 'ripple-action-btn w-full text-left p-4 rounded-2xl border-2 border-river-deep bg-river-deep text-white shadow-sm transition-all';
+                    label.className = 'text-[11px] font-bold uppercase tracking-wider opacity-80';
+                } else {
+                    btn.className = 'ripple-action-btn w-full text-left p-4 rounded-2xl border-2 border-slate-200 bg-white text-river-deep hover:border-river-waterway transition-all';
+                    label.className = 'text-[11px] font-bold uppercase tracking-wider text-slate-400';
+                }
+            }
+
+            const data = rippleScenarios[index];
+            const panel = document.getElementById('ripple-output-panel');
+            panel.innerHTML = `
+                <div class="border-b border-slate-100 pb-5">
+                    <span class="text-xs font-bold uppercase tracking-wider text-river-waterway">Active Ripple Chain Reaction</span>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-river-deep mt-1">${data.actionTitle}</h3>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1">${data.subtitle}</p>
+                </div>
+
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">SDGs Directly Activated (5 Goals):</p>
+                    <div class="flex flex-wrap gap-2.5">
+                        ${data.triggeredSdgs.map(s => `
+                            <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-extrabold shadow-xs" style="background-color: ${s.color}; color: ${s.dark ? '#1E293B' : '#FFFFFF'};">
+                                <span class="px-1.5 py-0.5 rounded bg-black/15 text-[11px]">SDG ${s.num}</span>
+                                <span>${s.name}</span>
+                            </span>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="space-y-3 pt-2">
+                    ${data.chain.map(c => `
+                        <div class="p-4 rounded-2xl bg-river-sand border border-slate-200/80">
+                            <p class="text-xs sm:text-sm font-bold text-river-deep">${c.step}</p>
+                            <p class="text-xs text-slate-600 mt-1 leading-relaxed">${c.detail}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // Complete 17 UN SDGs Quick Reference Matrix
+        const all17Sdgs = [
+            { num: 1, title: 'No Poverty', color: '#E5243B', aligned: false },
+            { num: 2, title: 'Zero Hunger', color: '#DDA63A', aligned: false },
+            { num: 3, title: 'Good Health & Well-Being', color: '#4C9F38', aligned: false },
+            { num: 4, title: 'Quality Education', color: '#C5192D', aligned: true },
+            { num: 5, title: 'Gender Equality', color: '#FF3A21', aligned: false },
+            { num: 6, title: 'Clean Water & Sanitation', color: '#26BDE2', aligned: true },
+            { num: 7, title: 'Affordable & Clean Energy', color: '#FCC30B', dark: true, aligned: true },
+            { num: 8, title: 'Decent Work & Economic Growth', color: '#A21942', aligned: true },
+            { num: 9, title: 'Industry, Innovation & Infrastructure', color: '#FD6925', aligned: false },
+            { num: 10, title: 'Reduced Inequalities', color: '#DD1367', aligned: false },
+            { num: 11, title: 'Sustainable Cities & Communities', color: '#FD9D24', aligned: true },
+            { num: 12, title: 'Responsible Consumption & Production', color: '#BF8B2E', aligned: true },
+            { num: 13, title: 'Climate Action', color: '#3F7E44', aligned: true },
+            { num: 14, title: 'Life Below Water', color: '#0A97D9', aligned: true },
+            { num: 15, title: 'Life on Land', color: '#56C02B', aligned: false },
+            { num: 16, title: 'Peace, Justice & Strong Institutions', color: '#00689D', aligned: false },
+            { num: 17, title: 'Partnerships for the Goals', color: '#19486A', aligned: true }
+        ];
+
+        function renderAll17Grid() {
+            const container = document.getElementById('all-17-sdgs-grid');
+            container.innerHTML = all17Sdgs.map(goal => `
+                <div class="rounded-2xl p-4 flex flex-col justify-between min-h-[118px] transition-all ${goal.aligned ? 'ring-2 ring-river-deep shadow-md scale-[1.01]' : 'opacity-70'}" style="background-color: ${goal.color}; color: ${goal.dark ? '#1E293B' : '#FFFFFF'};">
+                    <div class="flex items-start justify-between gap-2">
+                        <span class="font-heading font-extrabold text-2xl leading-none">${goal.num}</span>
+                        ${goal.aligned ? '<span class="px-2 py-0.5 rounded-full bg-black/20 text-[9px] font-extrabold uppercase tracking-wider">Riparian Focus</span>' : ''}
+                    </div>
+                    <p class="font-heading font-bold text-xs leading-snug mt-3">${goal.title}</p>
+                </div>
+            `).join('');
+        }
+
+        // Initialize SDG Page Components
+        renderSdgCards('all');
+        selectRippleAction(0);
+        renderAll17Grid();
+    </script>
+</body>
+</html>
